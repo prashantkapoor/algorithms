@@ -1,25 +1,32 @@
 package com.sorting;
 
+import java.util.Arrays;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] input=new int[] {8,5,7,7,3,2,2};
+		int[] input=new int[] {5,10,30,20,35,40,15};
 		long startTime=System.currentTimeMillis();
-		int[] bubbleSort=BubbleSort.sort(input);
+		int[] bubbleSort=BubbleSort.sort(Arrays.copyOf(input, input.length));
 		long endTime=System.currentTimeMillis();
 		System.out.println("Sorted using Bubble sort, in time: "+(endTime-startTime));
 		
 		startTime=System.currentTimeMillis();
-		int[] insertionSort=InsertionSort.sort(input);
+		int[] insertionSort=InsertionSort.sort(Arrays.copyOf(input, input.length));
 		endTime=System.currentTimeMillis();
 		System.out.println("Sorted using Insertion sort, in time: "+(endTime-startTime));
 		
 		startTime=System.currentTimeMillis();
-		int[] selectionSort=SelectionSort.sort(input);
+		int[] selectionSort=SelectionSort.sort(Arrays.copyOf(input, input.length));
 		endTime=System.currentTimeMillis();
 		System.out.println("Sorted using Selection sort, in time: "+(endTime-startTime));
+		
+		startTime=System.currentTimeMillis();
+		int[] heapSort=HeapSort.sort(Arrays.copyOf(input, input.length));
+		endTime=System.currentTimeMillis();
+		System.out.println("Sorted using Heap sort, in time: "+(endTime-startTime));
 	}
 	
 	private void printSortedArray(int[] array) {

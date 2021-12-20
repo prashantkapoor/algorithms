@@ -18,7 +18,7 @@ public class BubbleSort {
 					array[jIndex+1]=temp;
 				}
 			}
-			if(swap)
+			if(!swap)
 				break;
 		}
 		return array;

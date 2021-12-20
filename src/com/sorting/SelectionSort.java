@@ -13,8 +13,7 @@ public class SelectionSort {
 			int minElIndex=index;
 			int mover=index;
 			while(mover<length) {
-				if(array[mover]<minimum) {
-					minimum=array[mover];
+				if(array[mover]<array[minElIndex]) {
 					minElIndex=mover;
 				}
 				mover++;	
