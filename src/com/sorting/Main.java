@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] input=new int[] {5,10,30,20,35,40,15};
+		int[] input=Input.getLargeInput();
 		long startTime=System.currentTimeMillis();
 		int[] bubbleSort=BubbleSort.sort(Arrays.copyOf(input, input.length));
 		long endTime=System.currentTimeMillis();
@@ -27,6 +27,12 @@ public class Main {
 		int[] heapSort=HeapSort.sort(Arrays.copyOf(input, input.length));
 		endTime=System.currentTimeMillis();
 		System.out.println("Sorted using Heap sort, in time: "+(endTime-startTime));
+		
+		
+		startTime=System.currentTimeMillis();
+		int[] mergeSort=MergeSort.sort(Arrays.copyOf(input, input.length));
+		endTime=System.currentTimeMillis();
+		System.out.println("Sorted using Merge sort, in time: "+(endTime-startTime));
 	}
 	
 	private void printSortedArray(int[] array) {

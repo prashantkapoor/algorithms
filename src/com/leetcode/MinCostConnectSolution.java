@@ -1,5 +1,7 @@
 package com.leetcode;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class MinCostConnectSolution {
@@ -13,7 +15,10 @@ public class MinCostConnectSolution {
 	 public int connectSticks(int[] sticks) {
 	        int totalCost = 0;
 	 
-	        PriorityQueue<Integer> pq = new PriorityQueue<>();
+	        PriorityQueue<Integer> pq = new PriorityQueue();
+	        
+	        int[][] visited=new int[2][2];
+	        Arrays.fill(visited,0);
 	 
 	        // add all sticks to the min heap.
 	        for (int stick : sticks) {
